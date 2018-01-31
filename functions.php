@@ -21,3 +21,6 @@ add_theme_support( 'genesis-responsive-viewport' );
 
 //* Add support for 2-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 2 );
+
+//* Set full-width content as the default layout
+genesis_set_default_layout( 'full-width-content' );
