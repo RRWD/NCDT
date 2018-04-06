@@ -64,7 +64,7 @@ unregister_sidebar('sidebar');
 unregister_sidebar( 'sidebar-alt' );
 
 //* Remove Genesis Layout Settings
-remove_theme_support( 'genesis-inpost-layouts' );
+//remove_theme_support( 'genesis-inpost-layouts' );
 
 /** Remove the post meta function */
 remove_action( 'genesis_after_post_content', 'genesis_post_meta' );
