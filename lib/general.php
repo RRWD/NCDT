@@ -191,19 +191,28 @@ function ncdt_excerpts( $content ) {
 
 }
 
-add_filter( 'get_the_excerpt', 'filter_function_name' );
-function filter_function_name( $excerpt ) {
+
+/**
+ * Filter archive excerpts created with ACF, remove all HTML.
+ *
+ * @param   $excerpt
+ *
+ * @return  string  Filtered archive excerpt.
+ */
+function ncdt_archive_excerpt( $excerpt ) {
 
 	global $post;
 
 	if  ( ! get_field( 'acf_ncdt_custom_excerpt', $post->id ) ) {
 		return $excerpt;
 	} else {
-		$excerpt = get_field( 'acf_ncdt_custom_excerpt', $post->id );
+		$text = get_field( 'acf_ncdt_custom_excerpt', $post->id );
+		$excerpt = wp_strip_all_tags ( $text, false );
 	}
 
   	return $excerpt;
 }
+add_filter( 'get_the_excerpt', 'ncdt_archive_excerpt' );
 
 
 //* Register after post widget area
