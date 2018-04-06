@@ -222,7 +222,7 @@ a:focus {
 
 
 p {
-	margin: 0 0 28px;
+	margin: 0 0 0.8em;
 	padding: 0;
 }
 
@@ -277,6 +277,7 @@ blockquote::before {
 	position: relative;
 	top: -10px;
 }
+/*
 a[href$='.pdf']  { padding-right: 20px; background: url(images/icon_pdf.gif) no-repeat center right; }
 
 a[href$='.PDF']  { padding-right: 20px; background: url(images/icon_pdf.gif) no-repeat center right; }
@@ -299,28 +300,32 @@ a[href$='.PDF']  { padding-right: 20px; background: url(images/icon_pdf.gif) no-
 .site-inner a.no-bg { padding-right: 0; background: none }
 
 .site-inner a.ext   { padding-right: 15px; background: url(images/icon_link.gif)   no-repeat center right; }
-
+*/ 
 
 /* ## Headings
 --------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
 	color:#2d68b6;
-	font-weight: 400;
 	line-height: 1.2;
 	margin: 0 0 10px;
 }
 
+h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
 
 h1 {
-	font-size: 30px;
-	font-size: 3.0rem;
+	font-size: 40px;
+	font-weight: normal;
+	font-size: 4.0rem;
 }
 
 
 h2 {
 	font-size: 26px;
 	font-size: 2.6rem;
+	margin-top:30px;
 }
 
 
@@ -675,7 +680,7 @@ ol.i {list-style-type: lower-roman;}
 	margin-bottom:0;
 	padding-bottom:0;
 	padding-top:0;
-	color:#777;
+	color:#767676;
 }
 
 /* ## Site Containers
@@ -1329,7 +1334,9 @@ img.alignright,
 
 .summary, .summary p {
 	color: #222;
-	font-weight: 600;
+/*	font-weight: 600; */
+	font-size: 1.1em;
+	margin-bottom:1.1em;
 }
 
 
