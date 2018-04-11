@@ -1054,7 +1054,25 @@ img.alignright,
 	outline: #ccc solid 1px;
 }
 
+#toplink {
+	display: none;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	padding: 10px 15px;
+	background-color: #000;
+	color: #fff;
+	text-decoration: none;
+}
 
+#toplink.active {
+	display: inline-block;
+}
+
+#toplink:hover,
+#toplink:focus {
+	text-decoration: underline;
+}
 
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */

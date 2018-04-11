@@ -159,6 +159,7 @@ add_action( 'wp_enqueue_scripts', 'ncdt_enqueue_scripts' );
 function ncdt_enqueue_scripts() {
 
     wp_enqueue_script( 'responsive-menu', CHILD_URL . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'top', CHILD_URL . '/js/top.js', array('jquery'), '1.0.0', true );
 
     if ( is_home() || is_front_page() ) {
  		wp_enqueue_script( 'ncdt', CHILD_URL . '/js/ncdt-mouse-attention.js', array('jquery'), '1.0.0', true	);
@@ -329,3 +330,16 @@ function ncdt_sitemap() {
 
 }
 
+/**
+ * Insert a top link before the footer widgets
+ *
+ */
+function ncdt_before_footer_widgets() {
+
+	?>
+	<a href="#top" id="toplink">top</a>
+	<?php
+
+}
+
+add_action( 'genesis_before_footer', 'ncdt_before_footer_widgets', 5 );
