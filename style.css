@@ -305,12 +305,16 @@ a[href$='.PDF']  { padding-right: 20px; background: url(images/icon_pdf.gif) no-
 /* ## Headings
 --------------------------------------------- */
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h4, h5, h6 {
 	color:#2d68b6;
 	line-height: 1.2;
 	margin: 0 0 10px;
 }
-
+h3 {
+	color:#111;
+	line-height: 1.2;
+	margin: 0 0 10px;
+}
 h2, h3, h4, h5, h6 {
 	font-weight: 400;
 }
@@ -586,7 +590,8 @@ td {
 	padding: 6px 0;
 }
 .first-td {
-	padding-right:8px
+	padding-right:8px;
+	white-space: nowrap;
 }
 
 
@@ -660,15 +665,16 @@ ol.i {list-style-type: lower-roman;}
 }
 
 .programma h3 {
-	margin: 2px 0 6px 0;
+	margin: 2px 0 0 0;
+	padding:0;
 	font-size: 1.4rem;
 	font-size: 14pt;
 
 }
-.spreker {
-	margin-bottom:0;
-	padding-bottom:0;
-	color:#777;
+p.spreker {
+	margin:0;
+	padding:0;
+	color:#767676;
 }
 .sum {
 	margin-bottom:0;
