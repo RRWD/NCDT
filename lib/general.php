@@ -330,16 +330,16 @@ function ncdt_sitemap() {
 
 }
 
-/**
- * Insert a top link before the footer widgets
- *
- */
-function ncdt_before_footer_widgets() {
+	/**
+	 * Insert a top link before the footer widgets
+	 *
+	 */
+	function ncdt_before_footer_widgets() {
 
-	?>
-	<a href="#top" id="toplink">top</a>
-	<?php
+		?>
+		<a href="#top" id="toplink">top</a>
+		<?php
 
-}
+	}
 
-add_action( 'genesis_before_footer', 'ncdt_before_footer_widgets', 5 );
+	add_action( 'genesis_before_footer', 'ncdt_before_footer_widgets', 5 );
