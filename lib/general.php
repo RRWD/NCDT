@@ -331,16 +331,30 @@ function ncdt_sitemap() {
 
 }
 
-	/**
-	 * Insert a top link before the footer widgets
-	 *
-	 */
-	function ncdt_before_footer_widgets() {
+/**
+ * Insert a top link before the footer widgets
+ *
+ */
+function ncdt_before_footer_widgets() {
 
-		?>
-		<a href="#top" id="toplink">top</a>
-		<?php
+	?>
+	<a href="#top" id="toplink">top</a>
+	<?php
 
-	}
+}
 
-	add_action( 'genesis_before_footer', 'ncdt_before_footer_widgets', 5 );
+add_action( 'genesis_before_footer', 'ncdt_before_footer_widgets', 5 );
+
+
+/**
+ * Add tabindex = -1 to remove tab stop from image link.
+ *
+ */
+function ncdt_attributes_entry_image_link( $attributes ) {
+
+	$attributes['tabindex'] = '-1';
+
+	return $attributes;
+
+}
+add_filter( 'genesis_attr_entry-image-link', 'ncdt_attributes_entry_image_link', 10, 1 );
