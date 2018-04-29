@@ -6,9 +6,10 @@ add_action( 'genesis_site_title', 'wpacc_seo_site_title' );
 function wpacc_seo_site_title() {
 
 	/** Set what goes inside the wrapping tags */
-	$logo = CHILD_URL . "/images/ncdt-logo.png";
-	$wrap = '';
-
+	$logo   = CHILD_URL . "/images/ncdt-logo.png";
+	$wrap   = '';
+	$inside = '';
+	
 	if ( is_home() || is_front_page()) {
 
 		$title = sprintf( '<img src="' . $logo . ' " alt="Logo %s">', 'NCDT' );
